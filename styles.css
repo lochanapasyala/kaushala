@@ -1,0 +1,357 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  color-scheme: light;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #1f2937;
+  background: #f8fafc;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button, input, textarea {
+  font: inherit;
+}
+.container {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e2e8f0;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+.brand-mark {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: #2563eb;
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+.brand-title {
+  margin: 0;
+  font-weight: 700;
+}
+.brand-subtitle {
+  margin: 0.15rem 0 0;
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.nav-links a {
+  color: #374151;
+  font-weight: 500;
+}
+.hero {
+  padding: 3.5rem 0 2.5rem;
+}
+.hero-grid {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+}
+.eyebrow,
+.section-eyebrow {
+  display: inline-flex;
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  background: #e0f2fe;
+  color: #0369a1;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+.hero h1 {
+  margin: 1rem 0 1rem;
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  line-height: 1.05;
+  max-width: 680px;
+}
+.hero p {
+  margin: 0;
+  max-width: 640px;
+  color: #4b5563;
+  line-height: 1.75;
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 999px;
+  padding: 0.95rem 1.6rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.primary {
+  background: #2563eb;
+  color: #ffffff;
+}
+.secondary {
+  background: #ffffff;
+  color: #1f2937;
+  border: 1px solid #d1d5db;
+}
+.hero-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 28px;
+  padding: 2rem;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+}
+.hero-card-header {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #111827;
+}
+.hero-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.9rem;
+}
+.hero-features li {
+  color: #4b5563;
+  line-height: 1.7;
+}
+.stats-bar {
+  background: #ffffff;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  padding: 1.5rem 0;
+}
+.stats-grid div {
+  text-align: center;
+}
+.stats-grid span {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #111827;
+}
+.stats-grid p {
+  margin: 0.5rem 0 0;
+  color: #525252;
+}
+.section {
+  padding: 3rem 0;
+}
+.section-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.section-copy h2,
+.section-header h2 {
+  margin: 1rem 0 1rem;
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  line-height: 1.1;
+}
+.section-copy p,
+.section-header p {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.8;
+}
+.benefits-list {
+  margin: 1.75rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+.benefits-list li {
+  padding-left: 1.2rem;
+  position: relative;
+  color: #374151;
+}
+.benefits-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #2563eb;
+}
+.section-image {
+  min-height: 320px;
+  border-radius: 32px;
+  background: linear-gradient(180deg, #eff6ff 0%, #dbeafe 100%);
+  position: relative;
+}
+.section-image::before {
+  content: 'Patient-focused care.';
+  position: absolute;
+  inset: 2rem;
+  font-size: 1.1rem;
+  color: #1e3a8a;
+  line-height: 1.6;
+}
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 1.75rem;
+  box-shadow: 0 18px 35px rgba(15, 23, 42, 0.05);
+}
+.card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+}
+.card p {
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.75;
+}
+.trust-section {
+  background: #eff6ff;
+}
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.testimonial-card {
+  background: #ffffff;
+  border: 1px solid #dbeafe;
+  border-radius: 24px;
+  padding: 1.75rem;
+}
+.testimonial-card p {
+  margin: 0 0 1.25rem;
+  color: #374151;
+  line-height: 1.8;
+}
+.testimonial-card strong {
+  color: #0f172a;
+}
+.contact-section {
+  padding-bottom: 4rem;
+}
+.contact-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+.contact-details {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0 0;
+}
+.contact-details strong {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+.contact-form {
+  display: grid;
+  gap: 1rem;
+}
+.contact-form label {
+  display: grid;
+  gap: 0.5rem;
+  color: #111827;
+  font-weight: 500;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 14px;
+  padding: 0.95rem 1rem;
+  background: #ffffff;
+  color: #111827;
+}
+.contact-form textarea {
+  resize: vertical;
+}
+.site-footer {
+  padding: 2rem 0;
+  color: #4b5563;
+}
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+@media (max-width: 860px) {
+  .hero-grid,
+  .section-grid,
+  .cards-grid,
+  .testimonial-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+  .nav-links {
+    justify-content: flex-end;
+  }
+}
+@media (max-width: 640px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .hero {
+    padding-top: 2.5rem;
+  }
+}
